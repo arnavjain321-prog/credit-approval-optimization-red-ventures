@@ -1,82 +1,84 @@
-### Credit Approval Optimization – Red Ventures Case Study
+Credit Approval Optimization – Red Ventures Case Study
 
-This project is an end-to-end data science case study modeling credit approval probabilities for three partner lenders using logistic regression, calculating expected revenue, and designing an optimized routing strategy to maximize total approved revenue. The analysis includes data cleaning, exploratory analysis, model building, evaluation, and business recommendations.
+This project is an end-to-end data science case study modeling credit approval probabilities for three partner lenders using logistic regression, calculating expected revenue, and designing an optimized routing strategy to maximize total approved revenue. The analysis includes data cleaning, exploratory analysis, model development, evaluation, and business recommendations.
 
-### Project Overview
+Project Overview
 
-Red Ventures receives loan applications and must decide which lender to route each applicant to.
-Each lender has:
+Red Ventures receives loan applications and must decide which lender to route each applicant to. Each lender has different approval behavior and different revenue impacts.
+The goal is to:
 
-Different approval models
+Estimate approval probability for each lender
 
-Different expected revenue outcomes per approval
+Calculate expected revenue per applicant
 
-Different risk tolerance
+Build an optimized routing strategy that maximizes total expected revenue
 
-Your goal is to build an approval probability model and design a routing framework that maximizes total expected revenue.
+Key Steps
 
-### Key Steps
+Cleaned and transformed raw borrower data
 
-Cleaned and prepared applicant data
+Conducted exploratory analysis to understand feature distributions
 
-Conducted exploratory analysis to understand borrower characteristics
+Built logistic regression approval models for all three lenders
 
-Built logistic regression models to estimate approval probability for each lender
+Computed expected revenue using:
+expected_revenue = probability_of_approval × revenue_per_approval
 
-Calculated expected revenue:
-expected_revenue = P(approval) × revenue_per_approval
+Recommended an optimal routing strategy for maximum revenue
 
-Designed an optimized routing strategy mapping applicants to the lender with the highest expected revenue
+Evaluated tradeoffs between approval likelihood and revenue impact
 
-Evaluated model performance and business tradeoffs
+Repository Structure
 
-### Files in Repository
-├── 2026__28Candidate_29_Personal_Loans_Case.pdf   # Case prompt
-├── Red_Ventures_Case.ipynb                        # Full analysis
-├── README.md                                      # Documentation
-└── LICENSE                                        # MIT license
+Red_Ventures_Case.ipynb — Full analysis notebook
 
-### Tools & Libraries
+README.md — Project documentation
+
+LICENSE — MIT license
+
+2026__28Candidate_29_Personal_Loans_Case.pdf — Original case prompt
+
+Tools & Libraries
 
 Python
 
-Pandas
-
-NumPy
+Pandas, NumPy
 
 Scikit-learn
 
-Matplotlib / Seaborn
+Matplotlib, Seaborn
 
 Jupyter Notebook
 
-### How to Run
+How to Run
 
 Open the notebook:
 
 jupyter notebook Red_Ventures_Case.ipynb
 
 
-Run all cells to reproduce:
+Run all cells to reproduce the full workflow:
 
 Data cleaning
 
-Feature preparation
+Feature engineering
 
-Model training
+Model training & evaluation
 
-Optimization logic
+Revenue optimization
 
 Final routing recommendations
 
-### Results Summary
+Results Summary
 
-Logistic regression provided stable and interpretable approval probability models
+Logistic regression produced interpretable, stable approval models
 
-Lender-specific revenue calculations revealed that top-earning lenders were not always the most likely to approve
+Expected revenue revealed meaningful differences across lenders
 
-Optimized routing significantly increased expected total revenue compared to uniform or random assignment
+Optimized routing strategy delivered significantly higher expected revenue than baseline assignment strategies
 
-### License
+Clear business tradeoffs identified between approval probability and per-approval revenue
 
-This project is released under the MIT License. See the LICENSE file for details.
+License
+
+This project is released under the MIT License. See the LICENSE file for full details.
